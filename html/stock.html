@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>STOCK DETAILS</title>
+        <link rel="stylesheet" href="../css/stock.css" type="text/css">
+        <link href="../css/Hover-master/css/hover-min.css" rel="stylesheet">
+
+        <style>
+            input[type=text], select {
+              width: 90%;
+              padding: 12px 20px;
+              margin: 8px 50px 10px 50px;
+              display: inline-block;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+              box-sizing: border-box;
+            }
+            
+            input[type=submit] {
+              width: 26%;
+              background-color:#07547a;
+              color: white;
+              padding: 14px 20px;
+              margin: 8px 30px 10px 50px;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+            }
+            
+            /* div {
+              border-radius: 5px;
+              background-color: #f2f2f2;
+              padding: 20px;
+            } */
+            </style>
+
+
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="topbar">
+                <a href="operator.html"><img src="../img/backarr.png" width="30px" height="30p" class="hvr-float shadow"></a> 
+                <h1 align="center">   STOCK</h1>
+            </div>
+            <!-- top bar -->
+            <!-- <h3>_________________EDIT STOCK DETAILS HERE________________</h3> -->
+
+            <div class="form">
+              <form action="/action_page.php">
+
+                <!-- text areas -->
+                <label for="fname">ITEM ID</label>
+                <input type="text" id="fname" name="item_id" placeholder="Item ID..." required>
+            
+                <label for="lname">ITEM NAME</label>
+                <input type="text" id="lname" name="item_name" placeholder="Item Name...">
+
+                <label for="lname">TYPE</label>
+                <input type="text" id="lname" name="item_type" placeholder="Item Type...">
+
+                <label for="lname">QUANTITY</label>
+                <input type="text" id="lname" name="" placeholder="Item Quantity...">
+
+                <label for="lname">UNIT PRICE</label>
+                <input type="text" id="lname" name="lastname" placeholder="Unit Price...">
+                    
+                <!-- buttons -->
+                <input type="submit" value="Search" id="search">
+                <input type="submit" value="Update" id="update">
+                <input type="submit" value="Delete" id="delete">
+                <input type="submit" value="Add New" id="add">
+              </form>
+            </div>
+
+<?php
+	if(isset($_POST['signB'])){
+
+	$sql = "INSERT INTO foods (item_id,item_name,item_unit,company_id) VALUES ('".$_POST['item_id']."','".$_POST['item_name']."','".$_POST['item_unit']."','".$_POST['company_id']."')";
+
+	$result = mysqli_query($connection,$sql);
+	if($result)
+echo"<script> alert('Registered Sucessfully') </script>";
+else
+echo"failed";
+
+}
+
+?>
+
+
+        </div>
+        <!-- page wrapper -->
+    </body>
+</html>

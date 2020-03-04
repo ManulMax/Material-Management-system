@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Messages</title>
+        <link rel="stylesheet" href="../css/operator.css" type="text/css">
+        <link href="../css/Hover-master/css/hover-min.css" rel="stylesheet">
+        <style>
+              input[type=submit] {
+              width: 30%;
+              background-color:#28292b;
+              font-family: calibri;
+              font-size: large;
+              font-weight: bold;
+              color: white;
+              padding: 14px 20px;
+              margin: 50px 20px 10px 20px;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+            }
+            
+
+        </style>
+    <body>
+        <div class="wrapper">
+            <div class="topbar">
+                <a href="operator.html"><img src="../img/backarr.png" width="30px" height="30p" class="hvr-float shadow"></a> 
+                <h1>MESSAGES</h1>
+                <!-- <hr width="100%"> -->
+            </div>
+            <div class="msgbox">
+                
+                    <table border="1px" cellpadding="50px" align="center" width="75%">
+                        <tr>
+                            <th>Message ID</th>
+                            <th>Message</th>
+                            <th>Reply</th>
+                        </tr>
+                        <?php
+                        while($row=mysqli_fetch_assoc($result)){
+                            ?>
+                        <tr>
+                            <td><?php echo $row['message_id']?></td>
+                            <td><?php echo $row['message']?></td>
+                            <td><?php echo $row['reply']?></td>
+                        </tr>
+                        <?php
+                    }
+                    ?>
+                    </table>
+                
+            </div>
+            <!-- message box -->
+            <div class="reportbtn">
+                <form>
+                    <input type="submit" value="REPLY" id="repmsg" >
+                    <input type="submit" value="DELETE MESSAGE" id="delmsg">
+                </form>
+            </div>
+            <!-- buttons to delete msg  -->
+            <?php 
+            if(array_key_exists('send',$_post)){
+              send();
+            }
+
+            function send(){
+                $msg="#get message from database";
+                mail=("manulmadara9725@gmail.com","REPORT",$msg);
+            }
+          ?>
+            <!-- send report button -->
+        </div>
+        <!-- page wrapper -->
+    </body>
+</html>

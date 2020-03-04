@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <link>
+        <title>glassForm page</title>
+        <link href="../css/form.css" rel="stylesheet">
+        <script language="JavaScript" src="../js/order.js"></script>
+        <a href="../php/order.php"></a>
+    </head>
+    <body>
+        <div>
+            <fieldset>
+            <div class="topbar">
+                <h1 align="center">Order Form</h1>
+            </div><!--topbar-->
+            <div>
+                <form action="../php/order.php" class="size" name="orderform" onsubmit="checkform()" method="POST">
+                    <label>
+                        Category:
+                        <select name="option" id="option" onChange="changecat(this.value);">
+                            <option value="" disabled selected>Select Category</option>
+                            <option value="glass">Glass</option>
+                            <option value="sand">Sand</option>
+                            <option value="cement">Cement</option>
+                            <option value="gravel">Gravel</option>
+                            <option value="iron">Iron</option>
+                        </select>
+                    </label>
+                    <label>
+                        Material-Type:
+                        <select name="category" id="category">
+                            <option value="" disabled selected>Select Type</option>
+                        </select>
+                    </label>
+                    <label>
+                         Color: 
+                        <select name="color" id="color">
+                            <option value="" disabled selected>Select color</option>
+                        </select>
+                    </label> 
+                    <label>
+                        Thickness: 
+                            <select name="thickness" id="thick">
+                                <option value="" disabled selected>Select Thickness</option>
+                            </select>
+                    </label>
+                    <label>
+                        Quantity: <input type="text" name="quantity" size="50" placeholder="In square meters">
+                    </label>
+                    <label>
+                        Total Price: <input type="text" name="price" size="50">
+                    </label>
+                    <label>
+                        Needed Date: <input type="date" name="ndate">
+                    </label>   
+                    <fieldset>
+                        <p class="color">
+                            PLEASE FILL THE FOLLOWING DETAILS.
+                        </p><br />
+                        <label>
+                            Location address: <input type="text" name="naddress" size="50">
+                        </label> 
+                        <label>
+                            Contact Name: <input type="text" name="nname" size="50">
+                        </label>
+                        <label>
+                            Telephone No.: <input type="text" name="telephone" size="50">
+                        </label>
+                        <label>
+                            E-mail: <input type="email" name="mail">
+                        </label>    
+                    </fieldset><!--block content-->
+                    <br />
+                    <div align="center">
+                        <input type="submit" value="MAIL" name="mail">
+                        <input type="reset" value="CANCEL">
+                    </div><!--buttons-->
+                </form>
+            </div><!--content-->
+            </fieldset><!--full form-->
+        </div><!--full pge-->
+
+
+    </body>
+</html>

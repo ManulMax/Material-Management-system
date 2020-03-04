@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Operation page</title>
+        <link rel="stylesheet" href="../css/operator.css" type="text/css">
+        <link href="../css/Hover-master/css/hover-min.css" rel="stylesheet">
+        <style>
+              input[type=submit] {
+              width: 30%;
+              background-color:#28292b;
+              font-family: calibri;
+              font-size: large;
+              font-weight: bold;
+              color: white;
+              padding: 14px 20px;
+              margin: 50px 20px 10px 20px;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+            }
+            
+
+        </style>
+    <body>
+        <div class="wrapper">
+            <div class="topbar">
+                <a href="home.html"><img src="../img/backarr.png" width="30px" height="30p" class="hvr-float shadow"></a> 
+                <h1>OPERATOR</h1>
+                <!-- <hr width="100%"> -->
+            </div>
+    
+            <div class="navi clearfix">
+                <div class="supplier hvr-grow shadow">
+                   <a href="supplier.html"><img src="../img/supplier.png" width="200" height="200"x></a>
+                   <h2>SUPPLIER</h2>
+                </div>
+                <div class="customer hvr-grow shadow">
+                    <a href="customer.html" ><img src="../img/customer.png" width="200" height="200"></a>
+                    <h2>CUSTOMER</h2>
+                </div>
+                <div class="stock  hvr-grow shadow">
+                    <a href="stock.html"><img src="../img/stock.png" width="180" height="180"></a>
+                    <h2>STOCK</h2>
+                </div>
+                <div class="order  hvr-grow shadow">
+                    <a href="order.html"><img src="../img/order.png" width="180" height="180"></a>
+                    <h2>ORDER</h2>
+                </div>
+            </div>
+            <div class="reportbtn">
+                <form>
+                    <input type="submit" value="SEND REPORT" id="send">
+                    <a href="messages.html"><button type="button" id="view">VIEW MESSAGE</button></a>
+                    <a href="admindetails.html"><button type="button" id="details">ADMIN DETAILS</button></a>
+                </form>
+            </div>
+            <?php 
+            if(array_key_exists('send',$_post)){
+              send();
+            }
+
+            function send(){
+                $msg="#get message from database";
+                mail=("manulmadara9725@gmail.com","REPORT",$msg);
+            }
+          ?>
+            <!-- send report button -->
+        </div>
+        <!-- page wrapper -->
+    </body>
+</html>

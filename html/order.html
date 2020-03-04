@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>STOCK DETAILS</title>
+        <link rel="stylesheet" href="../css/order.css" type="text/css">
+        <link href="../css/Hover-master/css/hover-min.css" rel="stylesheet">
+
+        <style>
+            input[type=text], select {
+              width: 90%;
+              padding: 12px 20px;
+              margin: 8px 50px 10px 50px;
+              display: inline-block;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+              box-sizing: border-box;
+            }
+            
+            input[type=submit] {
+              width: 26%;
+              background-color:#07547a;
+              color: white;
+              padding: 14px 20px;
+              margin: 8px 30px 10px 50px;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+            }
+            
+            /* div {
+              border-radius: 5px;
+              background-color: #f2f2f2;
+              padding: 20px;
+            } */
+            </style>
+
+
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="topbar">
+                <a href="operator.html"><img src="../img/backarr.png" width="30px" height="30p" class="hvr-float shadow"></a> 
+                <h1 align="center">ODER FORM</h1>
+            </div>
+            <!-- top bar -->
+            <!-- <h3>_________________EDIT STOCK DETAILS HERE________________</h3> -->
+
+            <div class="form">
+              <form> 
+                <h2 >ODER INFOMANTION</h2><br/>
+                <label>ODER ID </label><br />
+                <input type="text" name="sid" placeholder="Oder Id" class="txtbox"/>
+                <br />
+                <label class="lbl">ITEM ID </label><br />
+                <input id="lbl" type="text" name="fname" placeholder="Item ID" class="txtbox"/>
+                <br />
+                <label class="lbl">QUANTITY </label><br />
+                <input type="text" name="sname" placeholder="Qyantity"class="txtbox" />
+                <br />
+                <label class="lbl">CONTACT NUMBER </label><br />
+                <input type="text" name="addline1" placeholder="Contact Num" class="txtbox"/>
+                <br /> 
+                <label class="lbl">LOCATION </label><br />
+                <input type="text" name="addline2" placeholder="Address Line 1"class="txtbox" />
+                <input type="text" name="addline2" placeholder="Address Line 2"class="txtbox" /><br />
+                <input type="text" name="addline2" placeholder="Address Line 3"class="txtbox" /><br />
+                <br /> </br/>
+                <label class="lbl">TOTAL PRICE </label><br />
+                <input type="text" name="addline3" placeholder="Address Line 3" class="txtbox"/>
+                <br/><br /><br />
+                
+                <input type="submit" value="ADD">
+                
+                <input type="submit" value="UPDATE">
+                <input type="submit" value="SEARCH">
+            </form>
+            </div>
+
+
+
+        </div>
+        <!-- page wrapper -->
+    </body>
+</html>
