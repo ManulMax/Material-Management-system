@@ -1,0 +1,93 @@
+.clearfix{overflow: auto;}
+*{text-decoration: none;}
+
+input[type=button] {
+    appearance:push-button; /* expected from UA defaults */
+  }
+/* .wrapper{
+    background-image: linear-gradient(darkred,darkblue,purple);
+} */
+.topbar{
+    float: right;
+}
+
+.topbar ul{
+    list-style: none;  
+}
+
+.topbar ul li{
+    padding: 0px 50px;
+    display: inline-block;
+    
+    
+}
+
+/* .topbar ul li:last-child{
+    border: 0px;
+} */
+
+.topbar ul li a{
+    font-family: roboto;
+    font-weight: thin;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.topbar ul li a:hover{
+    color: black;
+}
+
+.active, .topbar ul li a:hover{
+    padding: 0px 50px;
+    border: 1px solid #ccc;
+    border-radius: 100px;
+}
+
+.image1{
+    float: left;
+    margin-top: 74px;
+    margin-left: 100px;
+    margin-bottom: 100px;
+}
+
+.loginform{
+    float: right;
+    margin-top: 74px;
+    margin-right: 300px;
+    margin-bottom: 100PX;
+}
+
+.loginform form {
+    font-family:roboto;
+    font-weight: thin;
+    font-size: large;
+    color: white;
+}
+
+.loginform .submitbtn1 button{
+    background-color: rgb(115, 8, 119);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.loginform .submitbtn1 button:hover{
+    background-color: darkred;
+}
+
+input[type=text],select {
+    margin-left: 100px;
+    float:right;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    width: 100%;
+    border: #ccc;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
